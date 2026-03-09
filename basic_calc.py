@@ -1,10 +1,13 @@
 print("Wlcome to Basic Calculator")
 def add(n1, n2):
     return n1 + n2
+    
 def subtract(n1, n2):
     return n1 - n2
+    
 def multiply(n1, n2):
     return n1 * n2
+    
 def divide(n1, n2):
     if n2 == 0:
         return "Error: Cannot devide by zero!"
@@ -34,6 +37,7 @@ def calculator():
             should_continue = False
             calculator()
 calculator()       
+
 
 
 
