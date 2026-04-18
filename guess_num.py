@@ -18,7 +18,11 @@ secret_number = random.randint(1, 100)
 attempts = 0
 while attempts < max_attempts:
     print(f"Yo have {max_attempts - attempts} attempt remaining to gues the Number")
-    guess = int(input(f"Make a guess: "))
+    try:
+        guess = int(input(f"Make a guess: "))
+    except ValueError:
+        print("Please enter a valid number!")
+        continue
     attempts += 1
     if guess < secret_number:
         print("Too Low")
@@ -29,7 +33,7 @@ while attempts < max_attempts:
         break
 else: 
     print(f"Sorry! You've run out of attempt. The number was {secret_number}.")
-# end powered by Kamal
+#end powered by Kamal 
 
 
 
